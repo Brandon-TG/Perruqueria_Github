@@ -118,7 +118,7 @@ public class GG_BaseTest {
             logger.log(Status.SKIP, m);
         }
         
-        driver.quit();
+        //driver.quit();
     }
 
     @AfterTest
@@ -133,7 +133,8 @@ public class GG_BaseTest {
             //Skip captcha
             ChromeOptions options = new ChromeOptions();
 
-            options.addArguments("--headless", "--disable-gpu",
+            //options.addArguments("--headless", "--disable-gpu",
+            options.addArguments("--disable-gpu",
             "--window-size=1920,1200",
             "--ignore-certificate-errors", "--disable-extensions", "--no-sandbox",
             "--disable-dev-shm-usage");
@@ -141,10 +142,14 @@ public class GG_BaseTest {
             options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             options.setExperimentalOption("useAutomationExtension", false);
             options.addArguments("--incognito", "--disable-blink-features=AutomationControlled");
-
+            options.addArguments("--disable-features=AutofillServerCommunication,PasswordCheck,PasswordManager");
+            options.addArguments("--disable-features=SafetyTipUI,SafeBrowsingEnhancedProtection");
+            options.addArguments("--disable-blink-features=BlockCredentialedSubresources");
+            options.addArguments("--guest");
+            
             options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
             if (CC_Test.gloVerFlujo.equals("S")) { //Ver el Flujo en el Browser
-            	driver = new ChromeDriver();
+            	driver = new ChromeDriver(options);
             } else {
             	driver = new ChromeDriver(options); //el argumento options es para que se ejecute en background
             }

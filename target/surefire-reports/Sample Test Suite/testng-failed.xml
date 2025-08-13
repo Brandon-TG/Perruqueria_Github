@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="main.java.utils.GG_SuiteListener"/>
   </listeners>
-  <test thread-count="5" name="Southbridge Test Automation(failed)" verbose="0">
+  <test thread-count="5" name="Test Automation(failed)" verbose="0">
     <parameter name="browserName" value="chrome"/>
     <classes>
       <class name="test.java.carritocompras.CC_Test">
@@ -17,5 +17,5 @@
         </methods>
       </class> <!-- test.java.carritocompras.CC_Test -->
     </classes>
-  </test> <!-- Southbridge Test Automation(failed) -->
+  </test> <!-- Test Automation(failed) -->
 </suite> <!-- Failed suite [Sample Test Suite] -->

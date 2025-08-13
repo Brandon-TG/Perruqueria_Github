@@ -23,11 +23,16 @@ public class CC_Test extends GG_BaseTest {
 	@Test(enabled = true, dataProvider = "Data")
 	public void CC_QA_Automatizacion(String args[]) throws InterruptedException {
 
-		GG_Utils.infoTestCase("Carrito de compras",
-				"Validar la generacion de una compra al agregar un producto al carrito de compras");
+		GG_Utils.infoTestCase("Peluqueria Canina",
+				"Validar la generacion de una reserva a una peluqueria canina");
 
-		CC_PasosFuncionales.iniciarSesion(args[0], args[1], "1");
-		CC_PasosFuncionales.seleccionarProducto(args[2], args[3], args[4], "2");
+		//CC_PasosFuncionales.buscar(args[0], "1");
+		//CC_PasosFuncionales.agregarCarro( "2");
+		CC_PasosFuncionales.agregarCarro(args[0],args[1], "1");
+		CC_PasosFuncionales.verCarro(args[0],args[2], Integer.parseInt(args[3]), "2");
+		CC_PasosFuncionales.procederCompra(args[4], args[5], args[6], args[7], args[8], args[9], args[10], "3");
+		CC_PasosFuncionales.volverHome( "4");
+		
 	}
 	
 	@DataProvider(name = "Data")
