@@ -151,6 +151,7 @@ public class GG_BaseTest {
             if (CC_Test.gloVerFlujo.equals("S")) { //Ver el Flujo en el Browser
             	driver = new ChromeDriver(options);
             } else {
+                options.addArguments("--headless=new");
             	driver = new ChromeDriver(options); //el argumento options es para que se ejecute en background
             }
             //Skip captcha
