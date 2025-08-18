@@ -134,8 +134,7 @@ public class GG_BaseTest {
             ChromeOptions options = new ChromeOptions();
 
             options.addArguments("--headless", "--disable-gpu",
-            //options.addArguments("--disable-gpu",
-            "--window-size=1920,1200",
+            "--window-size=1920,1080",
             "--ignore-certificate-errors", "--disable-extensions", "--no-sandbox",
             "--disable-dev-shm-usage");
 
