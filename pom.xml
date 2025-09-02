@@ -6,7 +6,9 @@
 	<artifactId>southbrigde-base-estructure</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<properties>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   		<sonar.organization>brandon-tg</sonar.organization>
+		<sonar.login>563b91fad94af8b24bcd005af4cd6fc0cad665a0</sonar.login>
 		<sonar.exclusions>src/test/java/**/**</sonar.exclusions>
 	</properties>
 	<build>
