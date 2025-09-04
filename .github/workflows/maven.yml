@@ -39,7 +39,7 @@ jobs:
           -Dsonar.projectKey=Brandon-TG_Perruqueria_Github \
           -Dsonar.organization=brandon-tg \
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${SONAR_TOKEN} \
+          -Dsonar.token=${SONAR_TOKEN} \
           -Dsonar.exclusions=src/test/java/** \
           -Dsonar.test.inclusions=src/test/java/** \
           -DskipTests
