@@ -1,1 +1,1 @@
-CC_Logs_Perruqueria//\screenshots\passed\CC_QA_Automatizacion_20250902_171434.png
+CC_Logs_Perruqueria//\screenshots\passed\CC_QA_Automatizacion_20250902_183904.png
