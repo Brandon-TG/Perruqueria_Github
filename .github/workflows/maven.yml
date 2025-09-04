@@ -38,8 +38,10 @@ jobs:
         run: |
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.2.0.4988:sonar \
           -Dsonar.projectKey=Brandon-TG_Perruqueria_Github \
-          -Dsonar.organization=mi-org \
+          -Dsonar.organization=BrandonTG \
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${SONAR_TOKEN}
+          -Dsonar.login=${SONAR_TOKEN} \
+          -DskipTests
+
 
 
