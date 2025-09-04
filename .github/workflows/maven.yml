@@ -35,12 +35,15 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.2.0.4988:sonar \
-            -Dsonar.projectKey=Brandon-TG_Perruqueria_Github \
-            -Dsonar.organization=brandon-tg \
-            -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${SONAR_TOKEN} \
-            -DskipTests
+          mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.2.0.4988:sonar \
+          -Dsonar.projectKey=Brandon-TG_Perruqueria_Github \
+          -Dsonar.organization=brandon-tg \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=${SONAR_TOKEN} \
+          -Dsonar.exclusions=src/test/java/** \
+          -Dsonar.test.inclusions=src/test/java/** \
+          -DskipTests
+
 
 
 
